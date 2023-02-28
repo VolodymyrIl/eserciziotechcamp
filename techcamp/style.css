@@ -1,0 +1,204 @@
+/* ESERCIZI CSS */
+
+/*1) reperisci il font da questa fonte: https://fonts.google.com/specimen/Barlow+Condensed 
+      avrai bisogno di importarlo (trova "use on the web"): usa la modalità proposta con @import e incolla il link qui sotto. 
+      Es. @import url("https://.....")
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;700&display=swap');
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Outfit', sans-serif;
+font-family: 'Roboto', sans-serif;
+  /* 2) dovrai poi istruire la tua pagina nell'utilizzare proprio quel font per ogni elemento di testo 
+   
+  font-family: .... (guarda nella barra laterale della pagina del font google, ti viene dato l'esatto valore che dovrai usare per il font Barlow Condensed)
+  
+  come funziona la proprietà font-family:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
+  */
+}
+/* questo è un selettore CSS per il tag "body". 
+ogni selettore usa le parentesi graffe per raggruppare insieme diverse proprietà che daranno lo stile all'elemento selezionato
+ti verrà chiesto di crearne altri, selezionando tag diversi all'occorrenza, ma sempre con parentesi graffe a raggruppare proprietà da applicare all'elemento.
+*/
+
+h2 {
+  margin-top: 0;
+  font-weight: 200;
+  font-size: 36px;
+  margin-bottom: 6px;
+}
+h3 {
+  margin-top: 0;
+  font-weight: 900;
+}
+/* 3) crea un selettore CSS per gli elementi h2 e h3 in cui andrai a resettare il margin top a 0 
+
+segui questo link per maggiori informazioni:
+https://developer.mozilla.org/en-US/docs/Web/CSS/margin-top
+*/
+
+/* 4) crea un selettore per h2 in cui andrai ad impostare il peso del font a 200, la dimensione a 36px e il margin bottom a 6px 
+https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
+https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
+https://developer.mozilla.org/en-US/docs/Web/CSS/margin-bottom
+*/
+
+
+/* 5) crea un selettore per h3 e dagli un peso al font di 900 */
+
+.container { 
+  max-width: 960px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  margin: auto;
+  text-align: center;
+
+}
+/* 6) seleziona la classe container (usando il punto prima del nome: .container)
+il container dovrà avdere una dimensione massima di 960px ed essere centrato,
+anche il testo degli elementi figli dovrà essere centrato,
+il padding superiore ed inferiore dovrà essere di 48px
+.
+
+
+restringere le dimensioni di un blocco:
+https://developer.mozilla.org/en-US/docs/Web/CSS/max-width
+
+centrare un blocco con "margin auto":
+https://developer.mozilla.org/en-US/docs/Web/CSS/margin#simple_example
+
+proprietà di allineamento per elementi figli:
+https://developer.mozilla.org/en-US/docs/Web/CSS/text-align
+
+proprietà per assegnare una spaziatura interna (padding):
+https://developer.mozilla.org/en-US/docs/Web/CSS/padding
+
+*/
+
+.card{
+border: 2px#ebebeb  ;
+background-color: white;
+display: inline-block;
+max-width: 300px;
+border-radius: 6px;
+overflow: hidden;
+cursor: pointer;
+box-shadow:0px 6px 12px -6px rgba(0, 0, 0, 0.2);
+
+
+}
+/* 6) andiamo ora a definire un elemento card (ricorda di usare il puntino per le classi)
+la nostra card dovrà avere:
+- bordo di 2px con colore #ebebeb 
+- colore di sfondo bianco
+- dovrà cambiare la prorietà display da block (default) a inline-block 
+  per poterne affiancare più di una per linea
+- una dimensione massima di 300px (vedi sopra)
+- un bordo arrotondato di 6px
+- dovrà impedire ad un elemento figlio di vedersi fuori dai suoi confini (proprietà overflow)
+- dovrà cambiare il cursore da freccia a puntatore (proprietà cursor)
+- un'ombreggiatura con 0px di offset orizzontale, 6px di offset verticale, 12px di sfocatura, -6px di spread e colore nero al 20% (proprietà box-shadow)
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/border
+https://developer.mozilla.org/en-US/docs/Web/CSS/background-color
+https://developer.mozilla.org/en-US/docs/Web/CSS/display
+https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
+https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+*/
+.cardimage {
+  width: 100%;
+  height: auto;
+}
+/* 7) 
+  - dai all'immagine della card una larghezza del 100% e altezza "auto" */
+.cardBody{
+  padding: 16px;
+}
+/* 8) 
+  - crea un selettore per card-body e imposta il padding tutt'attorno di 16px */
+
+  .icon{
+    margin-top: 12px;
+  }
+/* 9) 
+  - seleziona l'icona all'interno della card e imposta un margine superiore di 12px 
+  https://developer.mozilla.org/en-US/docs/Web/CSS/margin-top
+*/
+.Ingredients{
+  margin: 0;
+  letter-spacing: 0.6px;
+  line-height: 1.6;
+}
+/* 10) 
+  - seleziona il paragrafo contenitore degli ingredienti
+  e resetta i margini a 0,
+  
+  - fai in modo di distanziare le lettere di 0.6px
+  aumenta l'interlinea a 1.6 (line-height)
+
+  https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing
+  https://developer.mozilla.org/en-US/docs/Web/CSS/line-height
+*/
+.list {
+  color:#555555 ;
+}
+/* 11) 
+- solo la lista degli ingredienti la vogliamo di colore grigio al 50% ovvero #555555 */
+.time{
+  margin-top: 24px;
+  letter-spacing:0.6px;
+}
+/* 12) 
+  - seleziona il paragrafo con i tempi di cottura e assegnagli un margine superiore di 24px e 
+  - spaziatura delle lettere a 0.6px 
+*/
+.badge{
+  padding:4px ;
+  background-color: #111111;
+color: white;
+border-radius: 3px;
+font-size: 13px;
+  
+}
+/* 13)
+  - seleziona la classe badge e assegna un padding di 4px su ogni lato, 
+  - colore di sfondo #111111
+  - colore del testo bianco
+  - bordi arrotondati di 3px
+  - e dimensione del testo di 13px
+*/
+
+/* BONUS:
+  - andiamo ad applicare alla card un effetto di hover 
+  (cambio di stato al posizionamento del mouse sopra la card)
+
+  - per questo effetto andremo ad usare sempre la stessa classe card, con aggiunto il selettore :hover senza spazi.
+
+  - all'interno di questo selettore andremo ad impostare un'ombreggiatura diversa dallo stato iniziale, con: 
+  0px di offset orizzontale, 12px di offset verticale, 24px di sfocatura, -8px di spread e colore nero al 20%
+
+  - il colore del bordo dovrà diventare nero
+  e andrà ingrandita la card del 10% tramite l'utilizzo della proprietà "transform" e funzione "scale"
+
+  https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+  https://developer.mozilla.org/en-US/docs/Web/CSS/:hover 
+
+*/
+
+/* EXTRA:
+  per far sì che il cambio di stato (hover) avvenga in modo graduale andremo ad istruire il browser 
+  nel creare una transizione da uno stato all'altro usando la proprietà transition.
+
+  all'interno della transition useremo "all" ad indicare che 
+  qualsiasi proprietà che cambierà nel tempo venga modificata gradualmente,
+  e indicheremo inoltre il tempo di transizione a 150 millisecondi.
+
+  applica quindi all'interno del selettore della card quest'ultima regola:
+  https://developer.mozilla.org/en-US/docs/Web/CSS/transition#syntax
+*/

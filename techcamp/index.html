@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- questo link serve a normalizzare gli stili di base degli elementi della pagina, con uno standard più moderno -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <!-- questo link collega il foglio di stile alla pagina -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- titolo visibile sul tab del browser, in alto -->
+    <title>Restaurant Card</title>
+</head>
+
+<body>
+    <div class="container">
+<div class="card">
+    <img class="cardimage" src="https://media-assets.lacucinaitaliana.it/photos/61fb10cadbe1b5a4409e5649/4:3/w_1064,h_798,c_limit/Carbonara-1600.jpg" alt="immaginecarbonara">
+    <div class="cardBody"> <img class="icon" src="bowl.png" height="42" alt=""><h2>Carbonara</h2>
+        <p class="Ingredients"> <b> Ingredienti per 4 persone:</b> <span class="list"> Guanciale 200 gr, Spaghetti 350 gr, Uova 4 tuorli, Pecorino 50 gr, Sale q.b., Pepe Nero q.b. </span> </p>
+    <p class="time"> <span class="badge"> Preparazione: 20 min</span></p>
+    </div>
+
+</div>
+    </div>
+    
+
+    <!-- PREMESSA: HTML è un linguaggio di markup costituito da tag. Spesso i tag hanno un'apertura e una chiusura come ad esempio: <p></p> 
+    l'apertura è rappresentata da <p> mentre la chiusura ha lo stesso nome ma con un "forward-slash" all'interno: </p>
+
+    alcuni tag sono "autoconclusivi" (incorporano lo slash all'interno del primo tag stesso, ma alla fine) 
+    e non hanno bisogno di un secondo tag di chiusura come ad esempio: <img />, <br />, <input />
+    -->
+
+    <!-- 1) crea un primo div con classe "container" in questo modo:
+
+        <div class="container"></div>
+
+        ——— presta molta attenzione alla sintassi dei tuoi tag, o non otterrai il risultato sperato ———
+        
+        questo sarà il genitore dei prossimi elementi che creeremo,
+        quindi il prossimo elemento che creeremo andrà all'interno del container.
+    -->
+    
+
+        <!-- 2) crea un altro div con classe "card" -->
+       
+
+            <!-- 3) "card" avrà due figli: "card-image" e "card-body" il primo sarà un tag <img> e il secondo un altro div, dovranno stare uno affianco all'altro come figli diretti di "card"
+            
+                un tag img ha bisogno anche di due attributi obbligatori: "src" e "alt"
+                
+                l'attributo src (che sta per "source") è la fonte del file immagine, che può trovarsi in locale o esternamente tramite un indirizzo URL.
+                in questo caso useremo un URL esterno: https://media-assets.lacucinaitaliana.it/photos/61fb10cadbe1b5a4409e5649/4:3/w_1064,h_798,c_limit/Carbonara-1600.jpg
+                puoi aprirlo nel browser per vederne il contenuto.
+                
+                come attributo "alt" usa una parola o una frase che descriva l'immagine.
+
+                più info sul tag img:
+                https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img
+            -->
+
+            
+                <!-- 4) all'interno di card-body crea un elemento titolo con tag h2, usa "Carbonara" come testo interno-->
+                
+
+                <!-- 5) sempre dentro a card-body crea un'altra immagine con classe "icon", link "./imgs/bowl.png" e attributo height con valore 42 -->
+                
+                <!-- 6) sotto alla precedente immagine crea un tag <p></p> (paragrafo) con classe "ingredients" -->
+                
+                <!-- 7) il testo sarà: 
+                 "Ingredienti per 4 persone: Guanciale 200 gr, Spaghetti 350 gr, Uova 4 tuorli, Pecorino 50 gr, Sale q.b., Pepe Nero q.b."
+                 inseriscilo nel paragrafo creato precedentemente -->
+                
+                 <!-- 8) la frase "Ingredienti per 4 persone:" dovrà essere incorporata dentro ad un tag <b></b> (per renderlo in grassetto) sempre all'interno del paragrafo precedente -->
+                
+                 <!-- 9) il resto della frase invece dovrà essere incorporata dentro ad uno <span></span> con classe "list"
+                a delimitare e differenziare quelli che sono gli ingredienti, che ci servirà poi per cambiare alcune caratteristiche di stile solo alla lista e non al precedente titoletto-->
+
+                <!-- 10) fatto questo non resta che creare un altro paragrafo con classe "time" e testo: 
+                "Preparazione: 20 min"
+                
+                dove "20 min" sarà incorporato all'interno di uno span con classe "badge"
+                -->
+
+                <!-- Perfetto, è ora di passare al foglio di stile CSS "style.css" e applicare un po' di stile alla nostra card! -->
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
